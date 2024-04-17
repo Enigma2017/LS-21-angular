@@ -1,0 +1,5 @@
+<app-header *ngIf="!router.url.includes('/product')"></app-header>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+<app-sidebar *ngIf="!router.url.includes('/product')"></app-sidebar>

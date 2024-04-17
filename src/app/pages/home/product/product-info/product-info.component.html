@@ -1,0 +1,24 @@
+<div class="product" [style.backgroundImage]="'url(' + backgroundImageUrl + ')'">
+    <div class="product-icons">
+        <span class="icon-chevron-left product-link__icon" (click)="goBack()"></span>
+        <a (click)="addToFavorites()"><span class="icon-heart product-link__icon"></span></a>
+    </div>
+    <div class="product__group">
+        <div class="product-info">
+            <h5 class="product-info__title">{{product.title}}</h5>
+            <p class="product-info__desc">{{product.desc}}</p>
+            <div class="product-info__rating">
+                <span class="icon-star"></span>
+                {{product.rating}}
+                <span>(6,879)</span>
+            </div>
+        </div>
+        <div class="product-bean">
+            <div class="product-bean__group">
+                <div class="product-bean__info bean-content"><span class="icon-coffee"></span>Coffee</div>
+                <div class="product-bean__info bean-content"><span class="icon-location"></span>Milk</div>
+            </div>
+            <p class="product-bean__roasted bean-content">Medium Roasted</p>
+        </div>
+    </div>
+</div>

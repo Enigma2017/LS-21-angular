@@ -1,0 +1,8 @@
+<div class="menu" (click)="navIsActive = !navIsActive">
+   <span class="icon-menu"></span>
+</div>
+<div class="page-title">{{ global.pageTitle }}</div>
+<div class="user">
+  <span class="icon-coffee"></span>
+</div>
+<app-header-menu [@fadeInOut] *ngIf="navIsActive" (navClose)="navIsActive = false" [class.is-active]="navIsActive"></app-header-menu>

@@ -1,0 +1,13 @@
+<h4 class="beans-title">Coffee beans</h4>
+<div [@zoomIn] class="list">
+  <a [routerLink]="'/product/' + item.id" class="item" *ngFor="let item of coffeeData">
+    <img [src]="item.image" class="item__img" alt="Coffee">
+    <h3 class="item__title">{{ item.title }}</h3>
+    <p class="item__desc">{{item.desc}}</p>
+    <div class="item__id"> {{ item.id }}</div>
+    <div class="price-group">
+      <p class="price"><span>$</span> {{ price | number: '.2-2'}}</p>
+      <span class="icon-plus"></span>
+    </div>
+  </a>
+</div>

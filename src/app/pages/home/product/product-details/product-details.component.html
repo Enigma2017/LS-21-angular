@@ -1,0 +1,19 @@
+<div class="details" >
+    <h6 class="details__title">Description</h6>
+    <p class="details__desc">Arabica beans are by far the most popular type of coffee beans, making up about 60% of the world’s coffee. These tasty beans originated many centuries ago in the highlands of Ethiopia, and may even be the first coffee beans ever consumed! </p>
+ <h6  class="details__title">Size</h6>
+ <div class="details-size">
+    <div class="details-size__item" (click)="selectSize('250gm')" [ngClass]="{'selected': selectedSize === '250gm'}">250gm</div>
+    <div class="details-size__item" (click)="selectSize('500gm')" [ngClass]="{'selected': selectedSize === '500gm'}">500gm</div>
+    <div class="details-size__item" (click)="selectSize('1000gm')" [ngClass]="{'selected': selectedSize === '1000gm'}">1000gm</div>
+</div>
+ <div  class="details-price">
+    <div class="details-price__info" >
+        <p class="details-price__label">price</p>
+        <p class="details-price__value"><span>$</span> 10.50</p>
+    </div>
+    <button  class="details-price__btn btn" (click)="addToCart() ">Add to Cart</button>
+    <div [@fadeInOut] *ngIf="message" class="product-message">{{ message }}</div>
+ </div>
+</div>
+
